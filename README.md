@@ -27,7 +27,7 @@ The idea is to build a dashboard to show the following stats and summaries
 
 Disclaimer: The details used for the stats in this project would represent nth close to the accurate detail, yet, I must build my project.
 
-I intend to build it with HTML, CSS, Tailwind CSS and Vanilla JS
+I intend to build it with HTML, SCSS, Tailwind CSS and Vanilla JS
 
 ### Demo
 You can view the demo for for this to-do app [here](https://#)
