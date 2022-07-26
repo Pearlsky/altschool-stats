@@ -14,7 +14,12 @@ A dashboard stats app for an Altschool Africa challenge using HTML, CSS & Vanill
 
 ## Overview
 
-![screenshot](images/)
+#### Mobile View
+![screenshot](design/mobile-nav.png)
+![screenshot](design/mobile-view.png)
+
+#### Desktop View
+![screenshot](design/1440-desktop.png)
 
 This is a my personal demo of an holiday challenge by Altschool Africa. It's one out of the three team projects for the Hackathan which every circle of Altschool Africa students have been asked to participate in. Yes, we have group and they are cooly called "circles".
 
@@ -27,25 +32,24 @@ The idea is to build a dashboard to show the following stats and summaries
 
 Disclaimer: The details used for the stats in this project would represent nth close to the accurate detail, yet, I must build my project.
 
-I intend to build it with HTML, SCSS, Tailwind CSS and Vanilla JS
+I intend to build it with HTML, SCSS and Vanilla JS
 
 ### Demo
 You can view the demo for for this to-do app [here](https://#)
 
 ### Experience
-- WIP
+- W-I-P
 
 ### Learning & Improvements
-- WIP
+- W-I-P
 
 
 ## Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
-
 - [Vanilla JS](https://javascript.com/)
 - [BEM Architecture](https://en.bem.info/)
-- [Tailwind CSS]()
+- [SASS]()
 
 ## Features
 
