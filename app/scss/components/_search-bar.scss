@@ -1,0 +1,25 @@
+@use '../util' as u;
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex-basis: 50%;
+    padding-block: .5em;
+    padding-inline: .5em 1em;
+    border-radius: 50px;
+    background-color: var(--grayblue);
+
+    &__label {
+        @include u.create-icon(url(../../../images/assets/magnifying-glass.svg),1.5em, 1.5em);
+    }
+
+    &__input {
+        font-size: 14px;
+        border: none;
+        background-color: #091f5500;
+
+        &::placeholder {
+            color: var(--transpblue);
+        }
+    }
+}

@@ -1,0 +1,69 @@
+@use '../util' as u;
+
+.menu {
+    margin-left: auto;
+
+    @media (min-width: 945px) {
+        margin: 0;
+    }
+
+    &__panel {
+        background-color: var(--darkblue);
+        padding: 4em 2em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 95%;
+        height: 100vh;
+        display: none;
+
+        @media (min-width: 945px) {
+            position: static;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo  {
+        margin: 0;
+    }
+
+    &__close {
+        border: none;
+        @include u.create-icon(url(../../../images/assets/cross.svg), 2.1em, 2.1em);
+
+        @media (min-width: 945px) {
+            display: none;
+        }
+    }
+
+    &__list {
+        padding: 2em 0;
+
+        &__tab {
+            display: flex;
+            align-items: center;
+            padding: 1em .7em;
+            border-radius: 10px;
+            width: 100%;
+            margin-bottom: .3em;
+
+            &:hover {
+                background-color: var(--paleblue)
+            }
+        }
+
+        &__tab a {
+            margin-left: .5em;
+            font-size: .9em;
+            color: #fff;
+        }
+    }
+}

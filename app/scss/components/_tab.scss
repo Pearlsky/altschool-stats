@@ -1,0 +1,68 @@
+@use '../util' as u;
+
+// tab-heading
+.tab {
+    &__title {
+        padding: 2em 1.7em 1em;
+        border-bottom: solid 1px var(--grayblue);
+
+        & h1 {
+            font-size: 2em;
+            font-weight: 900;
+        }
+    }
+
+    &__history {
+        display: flex;
+        font-size: 0.9em;
+        padding: 1.5em 1.9em;
+
+        &--prev {
+            color: var(--transpblue);
+            padding-right: 1.2em;
+            position: relative;
+
+            &::before {
+                content: url(../../../images/assets/caret-right.svg);
+                position: absolute;
+                top: 1px;
+                right: 0;
+            }
+        }
+    }
+
+    &__body {
+        background-color: #F3F3F3;
+        padding: 1.7em;
+    }
+}
+
+// tab body 
+
+.tile {
+    background-color: #fff;
+    border: solid 1px #ebe7e7;
+    border-radius: 10px;
+    padding: 1em 1.2em;
+    width: 100%;
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 600;
+        padding-block: 1em;
+
+        & h3 {
+            font-size: 1.125rem;
+        }
+    }
+
+    &__options {
+        @include u.create-icon(url(../../../images/assets/other.svg), 1.5em, 1.5em);
+    }
+
+    &__body {
+        padding-block: 1.5em;
+    }
+}

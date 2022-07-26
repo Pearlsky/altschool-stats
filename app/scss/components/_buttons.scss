@@ -1,0 +1,33 @@
+@use '../util/' as u;
+
+// mode-toggle buttons
+.mode-toggle-wrap {
+    padding: 0 2.5em 0 5%;
+    
+    @media (min-width: 945px) {
+        padding-right: 0;
+    }
+}
+
+.mode-toggle {
+    background-color: transparent;
+    border: none;
+    @include u.create-icon(url(../../../images/assets/sun.svg), 1.5em, 1.5em);
+}
+
+
+// menu-toggle 
+.menu__open {
+    position: absolute;
+    top: 5em;
+    right: 2em;
+    background-color: transparent;
+    border: none;
+    @include u.create-icon(url(../../../images/assets/2-horizontal-lines.svg), 1.5em, 1.5em);
+
+    @media (min-width: 945px) {
+        display: none;
+    }
+}
+
+

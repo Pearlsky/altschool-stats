@@ -1,0 +1,35 @@
+@use '../util' as u;
+@use '../util/fonts' as *;
+
+.tile__table {
+    width: 100%;
+
+    & td {
+        border-bottom: solid 1px #ebe7e7;
+        padding:.5em;
+        font-weight: $light;
+    }
+
+    & thead td {
+        padding: .9em .5em;
+        font-weight: $semi-bold;
+    }
+
+    & thead tr {
+        background-color: var(--grayblue)
+    }
+
+    & tfoot td {
+        font-weight: $semi-bold;
+    }
+
+    &__col--sortable {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__sort {
+        @include u.create-icon(url(../../../images/assets/sort.svg), 1em, 1em);
+    }
+}

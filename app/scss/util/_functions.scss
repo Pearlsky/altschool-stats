@@ -1,0 +1,6 @@
+@function pxToEm ($value) {
+    $emValue: $value / 16;
+    $emValue : $emValue + 'em';
+
+    @return $emValue;
+}
