@@ -21,7 +21,7 @@ A dashboard stats app for an Altschool Africa challenge using HTML, CSS & Vanill
 #### Desktop View
 ![screenshot](design/1440-desktop.png)
 
-This is a my personal demo of an holiday challenge by Altschool Africa. It's one out of the three team projects for the Hackathan which every circle of Altschool Africa students have been asked to participate in. Yes, we have group and they are cooly called "circles".
+This is a my personal demo of an holiday challenge by Altschool Africa. It's one of the team projects for the Hackathon which every circle of Altschool Africa's students have been asked to participate in. Yes, we have groups and they are cooly called "circles".
 
 The idea is to build a dashboard to show the following stats and summaries
 
@@ -30,9 +30,9 @@ The idea is to build a dashboard to show the following stats and summaries
     - How many students are male, female or other genders/orientation
     - Minimum, maximum, and average age of students in the school
 
-Disclaimer: The details used for the stats in this project would represent nth close to the accurate detail, yet, I must build my project.
+Disclaimer: The details used for the stats in this project would represent nth close to accurate details, yet, I must build my project.
 
-I intend to build it with HTML, SCSS and Vanilla JS
+I intend to build this with HTML, SCSS and Vanilla JS
 
 ### Demo
 You can view the demo for for this to-do app [here](https://#)
