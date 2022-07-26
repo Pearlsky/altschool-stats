@@ -15,8 +15,7 @@ A dashboard stats app for an Altschool Africa challenge using HTML, CSS & Vanill
 ## Overview
 
 #### Mobile View
-![screenshot](design/mobile-nav.png)
-![screenshot](design/mobile-view.png)
+![screenshot](design/mobile-nav.png) [screenshot](design/mobile-view.png)
 
 #### Desktop View
 ![screenshot](design/1440-desktop.png)
@@ -60,6 +59,6 @@ You can view the demo for for this to-do app [here](https://#)
 
 ## Reach Me
 
-- Website [pearlsky.super.site](https://pearlsky.super.site)
+<!-- - Website [pearlsky.super.site](https://pearlsky.super.site) -->
 - GitHub [@pearlsky](https://github.com/@pearlsky)
 - Twitter [@godaffected](https://twitter.com/godaffected)
