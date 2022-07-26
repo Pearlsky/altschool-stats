@@ -15,7 +15,8 @@ A dashboard stats app for an Altschool Africa challenge using HTML, CSS & Vanill
 ## Overview
 
 #### Mobile View
-![screenshot](design/mobile-nav.png) [screenshot](design/mobile-view.png)
+![screenshot](design/mobile-nav.png) 
+![screenshot](design/mobile-view-crop.png)
 
 #### Desktop View
 ![screenshot](design/1440-desktop.png)
