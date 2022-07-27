@@ -15,13 +15,15 @@
         left: 0;
         width: 95%;
         height: 100vh;
-        display: none;
+        transition: transform .5s;
+        transform: translateX(-100%);
 
         @media (min-width: 945px) {
             position: static;
-            display: block;
             width: 100%;
             height: 100%;
+            transition: none;
+            transform: translateX(0%);
         }
     }
 
