@@ -4,15 +4,19 @@
 .tile__table {
     width: 100%;
 
+    & th {
+        padding: .9em .5em;
+        font-weight: $semi-bold;
+        text-align: left;
+    }
+
     & td {
-        border-bottom: solid 1px #ebe7e7;
         padding:.5em;
         font-weight: $light;
     }
 
-    & thead td {
-        padding: .9em .5em;
-        font-weight: $semi-bold;
+    & tr {
+        border-bottom: solid 1px #ebe7e7;
     }
 
     & thead tr {
