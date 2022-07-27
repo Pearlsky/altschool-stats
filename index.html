@@ -9,6 +9,7 @@
     <title>Altschool Stats | Dashboard</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/app.js" type="module"></script>
 </head>
 <body>
     <div class="body-grid">
@@ -25,8 +26,8 @@
                 </div>
             </header>
 
-            <nav class="menu">
-                <button class="menu__open">menu</button>
+            <nav class="menu" role="navigation">
+                <button class="menu__open" aria-controls="tabMenu">menu</button>
                 <section class="menu__panel">
                         <header class="menu__heading">
                             <h1 class="menu__logo">
@@ -35,7 +36,7 @@
                             <button class="menu__close">close</button>
                         </header>
         
-                        <ul class="menu__list">
+                        <ul id="tabMenu" class="menu__list">
                             <li class="menu__list__tab">
                                 <img src="images/assets/layout.svg" alt="">
                                 <a href="">Dashboard</a>
@@ -87,19 +88,19 @@
                         <table class="tile__table">
                             <thead>
                                 <tr>
-                                    <td>
+                                    <th>
                                         <div class="tile__table__col--sortable">
                                             <span>Tutors</span>
-                                            <button class="tile__table__sort">sort</button>
+                                            <button id="tutors-sort" class="tile__table__sort">sort</button>
                                         </div>
-                                    </td>
-                                    <td>Track</td>
-                                    <td>
+                                    </th>
+                                    <th>Track</th>
+                                    <th>
                                         <div class="tile__table__col--sortable">
                                             <span>Modules</span>
-                                            <button class="tile__table__sort">sort</button>
+                                            <!-- <button id="mod-sort" class="tile__table__sort">sort</button> -->
                                         </div>
-                                    </td>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -147,10 +148,10 @@
                         <table class="tile__table">
                             <thead>
                                 <tr>
-                                    <td><button class="tile__table__sort">sort</button></td>
-                                    <td>FE</td>
-                                    <td>BE</td>
-                                    <td>CE</td>
+                                    <th><button id="tracks-sort" class="tile__table__sort">sort</button></th>
+                                    <th>FE</th>
+                                    <th>BE</th>
+                                    <th>CE</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -161,20 +162,16 @@
                                     <td>110</td>
                                 </tr>
                                 <tr>
-                                    <tr>
-                                        <td>Female</td>
-                                        <td>192</td>
-                                        <td>113</td>
-                                        <td>77</td>
-                                    </tr>
+                                    <td>Female</td>
+                                    <td>192</td>
+                                    <td>113</td>
+                                    <td>77</td>
                                 </tr>
                                 <tr>
-                                    <tr>
-                                        <td>Others</td>
-                                        <td>10</td>
-                                        <td>7</td>
-                                        <td>5</td>
-                                    </tr>
+                                    <td>Others</td>
+                                    <td>10</td>
+                                    <td>7</td>
+                                    <td>5</td>
                                 </tr>
                             </tbody>
                             <tfoot>
@@ -191,17 +188,17 @@
 
                 <section class="tile tile__students">
                     <div class="tile__head">
-                        <h3>Students</h3>
+                        <h3>Student (Ages)</h3>
                         <button class="tile__options"></button>
                     </div>
                     <div class="tile__body">
                         <table class="tile__table">
                             <thead>
                                 <tr>
-                                    <td><button class="tile__table__sort">sort</button></td>
-                                    <td>FE</td>
-                                    <td>BE</td>
-                                    <td>CE</td>
+                                    <th><button id="students-sort" class="tile__table__sort">sort</button></th>
+                                    <th>FE</th>
+                                    <th>BE</th>
+                                    <th>CE</th>
                                 </tr>
                             </thead>
                             <tbody>
