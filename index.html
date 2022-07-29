@@ -26,8 +26,8 @@
                 </div>
             </header>
 
-            <nav class="menu" role="navigation">
-                <button class="menu__open" aria-controls="tabMenu">menu</button>
+            <nav class="menu">
+                <button class="menu__open">menu</button>
                 <section class="menu__panel">
                         <header class="menu__heading">
                             <h1 class="menu__logo">
@@ -36,31 +36,31 @@
                             <button class="menu__close">close</button>
                         </header>
         
-                        <ul id="tabMenu" class="menu__list">
-                            <li class="menu__list__tab">
+                        <ul class="menu__list" role="tablist" aria-orientation="vertical">
+                            <li class="menu__list__tab" role="presentation">
                                 <img src="images/assets/layout.svg" alt="">
-                                <a href="">Dashboard</a>
+                                <a href="" role="tab" id="dashboardTab" aria-controls="dashboardSect">Dashboard</a>
                             </li>
-                            <li class="menu__list__tab">
+                            <li class="menu__list__tab" role="presentation">
                                 <img src="images/assets/user.svg" alt="">
-                                <a href="">Tutors</a>
+                                <a href="" role="tab" id="tutorsTab" aria-controls="tutorsSect">Tutors</a>
                             </li>
-                            <li class="menu__list__tab">
+                            <li class="menu__list__tab" role="presentation">
                                 <img src="images/assets/folder-open.svg" alt="">
-                                <a href="">Modules</a>
+                                <a href="" role="tab" id="modulesTab" aria-controls="modulesSect">Modules</a>
                             </li>
-                            <li class="menu__list__tab">
+                            <li class="menu__list__tab" role="presentation">
                                 <img src="images/assets/stack.svg" alt="">
-                                <a href="">Learning Tracks</a>
+                                <a href="" role="tab" id="tracksTab" aria-controls="tracksSect">Learning Tracks</a>
                             </li>
-                            <li class="menu__list__tab">
+                            <li class="menu__list__tab" role="presentation">
                                 <img src="images/assets/university.svg" alt="">
-                                <a href="">Students</a>
+                                <a href="" role="tab" id="studentsTab" aria-controls="studentsSect">Students</a>
                             </li>
                         </ul>     
                 </section>
             </nav>
-        <section class="tab">
+        <section class="tab" aria-labelledby="dashboardTab" role="tabpanel" id="dashboardSect">
             <header class="tab__head">
                 <div class="tab__title">
                     <h1>Dashboard</h1>
@@ -74,15 +74,24 @@
                 <section class="tile tile__tutors">
                     <div class="tile__head">
                         <h3>Tutors</h3>
-                        <button class="tile__button"></button>
+                        <button class="tile__button" tabindex="-1"></button>
                     </div>
-                    <div class="tile__body"></div>
+                    <div class="tile__body">
+                        <div class="tile__tutors__img">
+                            <img src="images/tutors/chide.png" alt="Chide">
+                            <img src="images/tutors/tabitha.png" alt="Tabitha">
+                            <img src="images/tutors/sijuade.png" alt="Sijuade">
+                            <img src="images/tutors/maye.png" alt="Maye">
+                            <img src="images/tutors/dave.png" alt="Dave">
+                            <img src="images/tutors/rising.png" alt="Rising">
+                        </div>
+                    </div>
                 </section>
 
                 <section class="tile tile__modules">
                     <div class="tile__head">
                         <h3>Modules</h3>
-                        <button class="tile__options"></button>
+                        <button class="tile__options" tabindex="-1"></button>
                     </div>
                     <div class="tile__body">
                         <table class="tile__table">
@@ -91,14 +100,14 @@
                                     <th>
                                         <div class="tile__table__col--sortable">
                                             <span>Tutors</span>
-                                            <button id="tutors-sort" class="tile__table__sort">sort</button>
+                                            <button id="tutors-sort" class="tile__table__sort" tabindex="-1">sort</button>
                                         </div>
                                     </th>
                                     <th>Track</th>
                                     <th>
                                         <div class="tile__table__col--sortable">
                                             <span>Modules</span>
-                                            <!-- <button id="mod-sort" class="tile__table__sort">sort</button> -->
+                                            <button id="mod-sort" class="tile__table__sort" tabindex="-1">sort</button>
                                         </div>
                                     </th>
                                 </tr>
@@ -142,13 +151,13 @@
                 <section class="tile tile__tracks">
                     <div class="tile__head">
                         <h3>Learning Tracks</h3>
-                        <button class="tile__options"></button>
+                        <button class="tile__options" tabindex="-1"></button>
                     </div>
                     <div class="tile__body">
                         <table class="tile__table">
                             <thead>
                                 <tr>
-                                    <th><button id="tracks-sort" class="tile__table__sort">sort</button></th>
+                                    <th><button id="tracks-sort" class="tile__table__sort" tabindex="-1">sort</button></th>
                                     <th>FE</th>
                                     <th>BE</th>
                                     <th>CE</th>
@@ -189,13 +198,13 @@
                 <section class="tile tile__students">
                     <div class="tile__head">
                         <h3>Student (Ages)</h3>
-                        <button class="tile__options"></button>
+                        <button class="tile__options" tabindex="-1"></button>
                     </div>
                     <div class="tile__body">
                         <table class="tile__table">
                             <thead>
                                 <tr>
-                                    <th><button id="students-sort" class="tile__table__sort">sort</button></th>
+                                    <th><button id="students-sort" class="tile__table__sort" tabindex="-1">sort</button></th>
                                     <th>FE</th>
                                     <th>BE</th>
                                     <th>CE</th>
@@ -225,7 +234,56 @@
                     </div>
                 </section>
             </main>
-        </section>    
+        </section> 
+        
+        <section class="tab" aria-labelledby="tutorsTab" role="tabpanel" id="tutorsSect" hidden>
+            <header class="tab__head">
+                <div class="tab__title">
+                    <h1>Tutors</h1>
+                </div>
+                <div class="tab__history">
+                    <p class="tab__history--prev">Home</p>
+                    <p class="tab__history--current">Tutors</p>
+                </div>
+            </header>
+            <main></main>
+        </section>
+        <section class="tab" aria-labelledby="modulesTab" role="tabpanel" id="modulesSect" hidden>
+            <header class="tab__head">
+                <div class="tab__title">
+                    <h1>Modules</h1>
+                </div>
+                <div class="tab__history">
+                    <p class="tab__history--prev">Home</p>
+                    <p class="tab__history--current">Modules</p>
+                </div>
+            </header>
+            <main></main>
+        </section>
+        <section class="tab" aria-labelledby="tracksTab" role="tabpanel" id="tracksSect" hidden>
+            <header class="tab__head">
+                <div class="tab__title">
+                    <h1>Learning Tracks</h1>
+                </div>
+                <div class="tab__history">
+                    <p class="tab__history--prev">Home</p>
+                    <p class="tab__history--current">Learning Tracks</p>
+                </div>
+            </header>
+            <main></main>
+        </section>
+        <section class="tab" aria-labelledby="studentsTab" role="tabpanel" id="studentsSect" hidden>
+            <header class="tab__head">
+                <div class="tab__title">
+                    <h1>Students</h1>
+                </div>
+                <div class="tab__history">
+                    <p class="tab__history--prev">Home</p>
+                    <p class="tab__history--current">Students</p>
+                </div>
+            </header>
+            <main></main>
+        </section>
     </div>
 </body>
 </html>
