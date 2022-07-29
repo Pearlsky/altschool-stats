@@ -99,7 +99,16 @@ function selectTab() {
 
     tabs.forEach((tab, index) => {
         tab.addEventListener("click", (e) => {
-            
+            tabs.forEach((subtab, indx)=> {
+                if (indx === index) {
+                    subtab.style.setProperty("background-color", "#3E4F7B");
+                }
+
+                else {
+                    subtab.style.removeProperty("background-color")
+                }
+            });
+
             tabpanels.forEach((el, i) => {
                 if(index === i) {
                     el.removeAttribute("hidden");
@@ -114,9 +123,6 @@ function selectTab() {
 }
 
 init();
-
-
-
 
 
 // ACCESSIBILITY 
