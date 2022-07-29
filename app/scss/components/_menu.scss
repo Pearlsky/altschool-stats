@@ -10,20 +10,21 @@
     &__panel {
         background-color: var(--darkblue);
         padding: 4em 2em;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
+        bottom: 0;
         width: 95%;
-        height: 100vh;
-        transition: transform .5s;
-        transform: translateX(-100%);
+        height: 100%;
+        display: none;
 
         @media (min-width: 945px) {
-            position: static;
-            width: 100%;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 20%;
             height: 100%;
-            transition: none;
-            transform: translateX(0%);
+            display: block;
         }
     }
 
