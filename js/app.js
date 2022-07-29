@@ -5,15 +5,17 @@ function init() {
 
     closeMenu(document.querySelector(".menu__close"), document.querySelector(".menu__panel"));
 
+    selectTab()
+
     sortAlph();
-    // sortNum();
+    sortNum();
 }
 
 // display menu panel on clicking menu icon
 
 function openMenu (openBtn, menu){
     openBtn.addEventListener("click", (e)=> {
-        menu.style.setProperty('transform', 'translateX(0%)');
+        menu.style.setProperty('display', 'block');
     });    
 } 
 
@@ -21,7 +23,7 @@ function openMenu (openBtn, menu){
 
 function closeMenu(closeBtn, menu) {
     closeBtn.addEventListener("click", (e)=> {
-        menu.style.setProperty('transform', 'translateX(-100%)');
+        menu.style.setProperty('display', 'none');
     });
 }
 
@@ -42,7 +44,7 @@ function sortAlph() {
         if (num === 5) {
             button.addEventListener("click", (e) => {
                 const table = e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
-                const sortableCol = e.target.parentElement.cellIndex;
+                const sortableCol = e.target.parentElement.parentElement.cellIndex;
                 sortTableAlph(table, sortableCol, sortableOrder);
             });
         }
@@ -50,7 +52,7 @@ function sortAlph() {
         else {
             button.addEventListener("click", (e) => {
                 const table = e.target.parentElement.parentElement.parentElement.parentElement;
-                const sortableCol = e.target.parentElement.cellIndex;
+                const sortableCol = e.target.parentElement.parentElement.cellIndex;
                 sortTableAlph(table, sortableCol, sortableOrder);
             });
         } 
@@ -61,32 +63,60 @@ function sortAlph() {
     findNSortAlphTable(studentsSort);
 }
 
-// function sortNum() {
-//     const modSort = document.getElementById("mod-sort");
+function sortNum() {
+    const modSort = document.getElementById("mod-sort");
 
-//     function findNSortNumTable(button, num = 4) {
-//         const sortableOrder = {
-//             order: "asc",
-//         };
+    function findNSortNumTable(button, num = 4) {
+        const sortableOrder = {
+            order: "asc",
+        };
 
-//         if (num === 5) {
-//             button.addEventListener("click", (e) => {
-//                 const table = e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
-//                 const sortableCol = e.target.parentElement.cellIndex;
-//                 sortTable(table, sortableCol, sortableOrder);
-//             });
-//         }
+        if (num === 5) {
+            button.addEventListener("click", (e) => {
+                const table = e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
+                const sortableCol = e.target.parentElement.parentElement.cellIndex;
+                sortTable(table, sortableCol, sortableOrder);
+            });
+        }
 
-//         else {
-//             button.addEventListener("click", (e) => {
-//                 const table = e.target.parentElement.parentElement.parentElement.parentElement;
-//                 const sortableCol = e.target.parentElement.cellIndex;
-//                 sortTable(table, sortableCol, sortableOrder);
-//             });
-//         } 
-//     };
+        else {
+            button.addEventListener("click", (e) => {
+                const table = e.target.parentElement.parentElement.parentElement.parentElement;
+                const sortableCol = e.target.parentElement.parentElement.cellIndex;
+                sortTable(table, sortableCol, sortableOrder);
+            });
+        } 
+    };
 
-//     findNSortNumTable(modSort, 5);
-// }
+    findNSortNumTable(modSort, 5);
+}
+
+// toggle tabs and tabpanels
+function selectTab() {
+    let tabs = Array.from(document.querySelector(".menu__list").children);
+
+    let tabpanels = document.querySelectorAll(".tab");
+
+    tabs.forEach((tab, index) => {
+        tab.addEventListener("click", (e) => {
+            
+            tabpanels.forEach((el, i) => {
+                if(index === i) {
+                    el.removeAttribute("hidden");
+                }
+
+                else if(index !== i) {
+                    el.setAttribute("hidden", "");
+                }
+            });
+        });
+    });
+}
 
 init();
+
+
+
+
+
+// ACCESSIBILITY 
